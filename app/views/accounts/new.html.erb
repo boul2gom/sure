@@ -1,4 +1,4 @@
-<%= render layout: "accounts/new/container", locals: { title: t(".title") } do %>
+<%= render layout: "accounts/new/container", locals: { title: _("New Account") } do %>
   <div class="text-sm"
        <% if @provider_configs.any? { |c| c[:key] == "lunchflow" } %>
          data-controller="lunchflow-preload"

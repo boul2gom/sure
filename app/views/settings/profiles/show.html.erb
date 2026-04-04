@@ -5,21 +5,21 @@
     <%= render "settings/user_avatar_field", form: form, user: @user %>
 
     <div>
-      <%= form.email_field :email, placeholder: t(".email"), label: t(".email") %>
+      <%= form.email_field :email, placeholder: _("Email Address"), label: _("Email Address") %>
 
       <% if @user.unconfirmed_email.present? %>
         <p class="mt-2 text-sm text-gray-600">
-          You have requested to change your email to <%= @user.unconfirmed_email %>. Please go to your email and confirm for the change to take effect. If you haven't received the email, please check your spam folder, or <%= link_to "request a new confirmation email", resend_confirmation_email_user_path(@user), class: "hover:underline text-secondary" %>.
+          <%= _("You have requested to change your email to %{email}. Please go to your email and confirm for the change to take effect. If you haven't received the email, please check your spam folder, or %{link}.") % { email: @user.unconfirmed_email, link: link_to(_("request a new confirmation email"), resend_confirmation_email_user_path(@user), class: "hover:underline text-secondary") } %>
         </p>
       <% end %>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-        <%= form.text_field :first_name, placeholder: t(".first_name"), label: t(".first_name") %>
-        <%= form.text_field :last_name, placeholder: t(".last_name"), label: t(".last_name") %>
+        <%= form.text_field :first_name, placeholder: _("First Name"), label: _("First Name") %>
+        <%= form.text_field :last_name, placeholder: _("Last Name"), label: _("Last Name") %>
       </div>
 
       <div class="flex justify-end mt-4">
-        <%= render DS::Button.new(text: t(".save"), class: "md:w-auto w-full justify-center") %>
+        <%= render DS::Button.new(text: _("Save"), class: "md:w-auto w-full justify-center") %>
       </div>
     </div>
   <% end %>

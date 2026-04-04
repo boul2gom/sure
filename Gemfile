@@ -141,3 +141,11 @@ group :test do
   gem "climate_control"
   gem "simplecov", require: false
 end
+
+# i18n
+gem 'fast_gettext'
+gem 'gettext_i18n_rails'
+
+group :development do
+  gem 'gettext', '>= 3.0.2', require: false
+end

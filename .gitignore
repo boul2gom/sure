@@ -32,6 +32,12 @@
 !/tmp/storage/.keep
 /db/development.sqlite3
 
+# i18n
+i18n/ui/**/*.time_stamp
+i18n/ui/**/*.edit.po
+i18n/ui/**/*.mo
+i18n/ui/en/
+
 /public/assets
 
 # Ignore master key for decrypting credentials and more.

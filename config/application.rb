@@ -51,5 +51,8 @@ module Sure
     # Handle OmniAuth/OIDC errors gracefully (must be before OmniAuth middleware)
     require_relative "../app/middleware/omniauth_error_handler"
     config.middleware.use OmniauthErrorHandler
+
+    # Centralized i18n structure for system (YAML) strings
+    config.i18n.load_path += Dir[Rails.root.join('i18n', 'system', '**', '*.{rb,yml}')]
   end
 end

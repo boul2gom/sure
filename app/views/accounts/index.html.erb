@@ -1,4 +1,4 @@
-<%= content_for :page_title, t(".accounts") %>
+<%= content_for :page_title, _("Accounts") %>
 <%= content_for :page_actions do %>
   <%= icon(
         "refresh-cw",
@@ -9,7 +9,7 @@
         frame: :_top
       ) %>
   <%= render DS::Link.new(
-    text: "New account",
+    text: _("New account"),
     href: new_account_path(return_to: accounts_path),
     variant: "primary",
     icon: "plus",
@@ -21,6 +21,21 @@
   <%= render "empty" %>
 <% else %>
   <div class="space-y-2">
+    <!-- PoC Stimulus i18n Pattern Example -->
+    <div class="bg-surface p-4 rounded-lg border border-subdued mb-4"
+         data-controller="account-sync"
+         data-account-sync-i18n-value="<%= { 
+           syncing: _('Syncing accounts...'), 
+           success: _('Sync complete!'),
+           error: _('Failed to sync accounts.')
+         }.to_json %>">
+      <h3 class="text-sm font-medium mb-2"><%= _("Manual Sync Test") %></h3>
+      <button data-account-sync-target="button" 
+              data-action="click->account-sync#sync"
+              class="px-3 py-1 bg-primary text-inverted rounded text-sm">
+        <%= _('Sync Now') %>
+      </button>
+    </div>
     <% if @plaid_items.any? %>
       <%= render @plaid_items.sort_by(&:created_at) %>
     <% end %>

@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: app 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-04 21:07+0200\n"
+"PO-Revision-Date: 2026-04-04 21:07+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "Accounts"
+msgstr ""
+
+msgid "Email Address"
+msgstr ""
+
+msgid "Failed to sync accounts."
+msgstr ""
+
+msgid "First Name"
+msgstr ""
+
+msgid "Last Name"
+msgstr ""
+
+msgid "Manual Sync Test"
+msgstr ""
+
+msgid "New Account"
+msgstr ""
+
+msgid "New account"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Sync Now"
+msgstr ""
+
+msgid "Sync complete!"
+msgstr ""
+
+msgid "Syncing accounts..."
+msgstr ""
+
+msgid "You have requested to change your email to %{email}. Please go to your email and confirm for the change to take effect. If you haven't received the email, please check your spam folder, or %{link}."
+msgstr ""
+
+msgid "request a new confirmation email"
+msgstr ""
