@@ -1,0 +1,15 @@
+fr:
+  activerecord:
+    models:
+      account: "Account"
+      depository: "Depository"
+      investment: "Investment"
+      user: "User"
+    attributes:
+      account:
+        name: "Account Name"
+        balance: "Balance"
+      user:
+        email: "Adresse E-mail"
+        first_name: "Prénom"
+        last_name: "Nom"
